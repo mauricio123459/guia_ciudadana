@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Registro de Lugares Turísticos</title>
+
+<style>
+body{
+    font-family: Arial;
+    background:#e0f2fe;
+    text-align:center;
+    padding:40px;
+}
+
+form{
+    background:white;
+    padding:20px;
+    border-radius:10px;
+    width:300px;
+    margin:auto;
+    box-shadow:0 0 10px rgba(0,0,0,.2);
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin:10px 0;
+}
+
+button{
+    padding:10px;
+    width:100%;
+    background:#0284c7;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Registro de Lugar Turístico</h2>
+
+<form method="post">
+<input type="text" name="lugar" placeholder="Lugar turístico" required>
+<input type="text" name="ubicacion" placeholder="Ubicación" required>
+<button type="submit" name="guardar">Guardar</button>
+</form>
+
+</body>
+</html>
+
+<?php
+if(isset($_POST['guardar'])){
+    $conexion = new mysqli("localhost","root","","turismo");
+
+    $lugar = $_POST['lugar'];
+    $ubicacion = $_POST['ubicacion'];
+
+    $sql = "INSERT INTO lugares (lugar, ubicacion)
+            VALUES ('$lugar','$ubicacion')";
+
+    if($conexion->query($sql)){
+        echo "<p>Registro guardado correctamente</p>";
+    }else{
+        echo "Error al guardar";
+    }
+
+    $conexion->close();
+}
+?>
