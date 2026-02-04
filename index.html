@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lugares Turísticos — Valle de Bravo</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: Arial, sans-serif;
+}
+
+body{
+  background:#f1f5f9;
+}
+
+/* Barra de navegación */
+nav{
+  background:#1e3a8a;
+}
+
+.menu{
+  display:flex;
+  justify-content:center;
+  list-style:none;
+}
+
+.menu li{
+  position:relative;
+}
+
+.menu > li > a{
+  display:block;
+  padding:15px 20px;
+  color:white;
+  text-decoration:none;
+}
+
+.menu li:hover{
+  background:#2563eb;
+}
+
+/* Submenú */
+.submenu{
+  display:none;
+  position:absolute;
+  background:#2563eb;
+  list-style:none;
+  min-width:200px;
+}
+
+.submenu li a{
+  color:white;
+  padding:12px;
+  display:block;
+  text-decoration:none;
+}
+
+.menu li:hover .submenu{
+  display:block;
+}
+
+/* Secciones */
+section{
+  padding:40px;
+  max-width:900px;
+  margin:30px auto;
+  background:white;
+  border-radius:10px;
+  box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+h2{
+  color:#1e3a8a;
+  margin-bottom:10px;
+}
+
+footer{
+  text-align:center;
+  padding:15px;
+  background:#1e3a8a;
+  color:white;
+}
+</style>
+
+</head>
+<body>
+
+<nav>
+<ul class="menu">
+
+<li>
+<a href="#lago">Lago de Valle</a>
+<ul class="submenu">
+<li><a href="#lago">Información del Lago</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#velo">Velo de Novia</a>
+<ul class="submenu">
+<li><a href="#velo">Información Cascada</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#mirador">La Peña</a>
+<ul class="submenu">
+<li><a href="#mirador">Información Mirador</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#parapente">Parapente</a>
+<ul class="submenu">
+<li><a href="#parapente">Vuelos y Deportes</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#centro">Centro</a>
+<ul class="submenu">
+<li><a href="#centro">Zona turística</a></li>
+</ul>
+</li>
+
+<li>
+<a href="#santuario">Santuario</a>
+<ul class="submenu">
+<li><a href="#santuario">Monarca</a></li>
+</ul>
+</li>
+
+</ul>
+</nav>
+
+<section id="lago">
+<h2>Lago de Valle de Bravo</h2>
+<p>
+El lago es el principal atractivo turístico. Aquí se practican deportes acuáticos,
+paseos en lancha y actividades recreativas familiares.
+</p>
+</section>
+
+<section id="velo">
+<h2>Cascada Velo de Novia</h2>
+<p>
+Una de las cascadas más famosas del Estado de México. Ideal para caminar,
+tomar fotografías y disfrutar de la naturaleza.
+</p>
+</section>
+
+<section id="mirador">
+<h2>La Peña — Mirador</h2>
+<p>
+Un excelente punto para observar todo Valle de Bravo y tomar fotografías panorámicas.
+</p>
+</section>
+
+<section id="parapente">
+<h2>Zona de Parapente</h2>
+<p>
+Valle de Bravo es famoso por el parapente, donde visitantes pueden volar y disfrutar
+de vistas espectaculares.
+</p>
+</section>
+
+<section id="centro">
+<h2>Centro de Valle de Bravo</h2>
+<p>
+El centro ofrece restaurantes, artesanías y calles tradicionales que atraen turistas
+todo el año.
+</p>
+</section>
+
+<section id="santuario">
+<h2>Santuario de la Mariposa Monarca</h2>
+<p>
+Durante la temporada invernal, miles de mariposas monarca llegan a esta región,
+siendo un espectáculo natural impresionante.
+</p>
+</section>
+
+<footer>
+Proyecto escolar — Lugares turísticos de Valle de Bravo © 2026
+</footer>
+
+</body>
+</html>
